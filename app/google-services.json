@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "328196949038",
+    "firebase_url": "https://hus-kaarah.firebaseio.com",
+    "project_id": "hus-kaarah",
+    "storage_bucket": "hus-kaarah.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328196949038:android:cf7320cd01f444f7",
+        "android_client_info": {
+          "package_name": "com.badsect0r.huskaarah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "328196949038-h1kshssdvbh5996u6qe7eqm3sllf38c0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.badsect0r.huskaarah",
+            "certificate_hash": "741cca5463c3a911c379b895825f243fdc214d3c"
+          }
+        },
+        {
+          "client_id": "328196949038-8suo2rka5kli61bvn9rbm38j7hrlupeu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaF9LO2ywtCfgU3Qpgcc7o9HciBcPnf2g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "328196949038-8suo2rka5kli61bvn9rbm38j7hrlupeu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
