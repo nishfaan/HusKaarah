@@ -72,6 +72,8 @@ public class DriverLoginActivity extends AppCompatActivity {
                             String user_id = mAuth.getCurrentUser().getUid();
                             DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("Users").child("Drivers").child(user_id);
                             current_user_db.setValue(true);
+
+                            Toast.makeText(DriverLoginActivity.this, "driver user created", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -84,7 +86,7 @@ public class DriverLoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 final String email = mEmail.getText().toString();
                 final String password = mPassword.getText().toString();
-                //sigining in with the above email and password
+                //signing in with the above email and password
                 mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(DriverLoginActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {

@@ -69,10 +69,11 @@ public class CustomerLoginActivity extends AppCompatActivity {
                         }else {
                             //once the user is created we would want to take the id of the user into the databse along with some other informations
                             String user_id = mAuth.getCurrentUser().getUid();
-                            DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("users").child("Customers").child(user_id);
+                            DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("Users").child("Customers").child(user_id);
 
                             // the above databsereference will be set to true so that it will be saved to the database
                             current_user_db.setValue(true);
+                            Toast.makeText(CustomerLoginActivity.this, "customer user created", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
