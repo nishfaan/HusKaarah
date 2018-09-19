@@ -76,7 +76,7 @@ public class DriverLoginActivity extends AppCompatActivity {
                             Toast.makeText(DriverLoginActivity.this, "driver user created", Toast.LENGTH_SHORT).show();
                         }
                     }
-                })
+                });
 
             }
         });
