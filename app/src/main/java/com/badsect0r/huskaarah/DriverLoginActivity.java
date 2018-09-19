@@ -40,7 +40,7 @@ public class DriverLoginActivity extends AppCompatActivity {
                 // whenever we login this auth-state listener is called and we move onto the next page
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if(user!=null){
-                    Intent intent =  new Intent(DriverLoginActivity.this, MapActivity.class);
+                    Intent intent =  new Intent(DriverLoginActivity.this, DriverMapActivity.class);
                     startActivity(intent);
                     finish();
                     return; //from here the user logs in and goes ot the next page
@@ -65,9 +65,9 @@ public class DriverLoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         //here we will  check if task is successful
-                        if(!task.isSuccessful()){ //if this validation fails the user was created
+                        if (!task.isSuccessful()) { //if this validation fails the user was created
                             Toast.makeText(DriverLoginActivity.this, "sign up error", Toast.LENGTH_SHORT).show();
-                        }else {
+                        } else {
                             //once the user is created we would want to take the id of the user into the databse along with some other informations
                             String user_id = mAuth.getCurrentUser().getUid();
                             DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("Users").child("Drivers").child(user_id);
@@ -76,7 +76,7 @@ public class DriverLoginActivity extends AppCompatActivity {
                             Toast.makeText(DriverLoginActivity.this, "driver user created", Toast.LENGTH_SHORT).show();
                         }
                     }
-                });
+                })
 
             }
         });
